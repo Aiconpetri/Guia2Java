@@ -29,20 +29,20 @@ public class ServicioRaices {
     }
      public void obtenerRaices(Raices r1,boolean dos){
          if (dos==true){
-             System.out.println("La solucion para la ecuacion postiva es "+(-r1.getB())*(+Math.sqrt((Math.pow(r1.getB(), 2))-(4*r1.getA()*r1.getC())/(2*r1.getA()))));
-             System.out.println("La solucion negativa para la ecuacion es "+(-r1.getB())*(-Math.sqrt((Math.pow(r1.getB(), 2))-(4*r1.getA()*r1.getC())/(2*r1.getA()))));
+             System.out.println("La solucion x1 es "+(-r1.getB()+Math.sqrt((Math.pow(r1.getB(), 2))-(4*r1.getA()*r1.getC())))/(2*r1.getA()));
+             System.out.println("La solucion x2 es "+(-r1.getB()-Math.sqrt((Math.pow(r1.getB(), 2))-(4*r1.getA()*r1.getC())))/(2*r1.getA()));
          }
      }
      public void obtenerRaiz(Raices r1,boolean dos){
          if (dos==false){
-             System.out.println("La raiz es "+(-r1.getB())*(2*r1.getA()));
+             System.out.println("La raiz es "+(-r1.getB())/(2*r1.getA()));
          }
      }
      public void calcular(Raices r1,boolean dos){
          if ((Math.pow(r1.getB(), 2))-4*r1.getA()*r1.getC()<0){
              System.out.println("La ecuacion no tiene solucion");
          }else{
-             obtenerRaiz(r1, dos);
+         obtenerRaiz(r1, dos);
          obtenerRaices(r1,dos);
          }
      }
