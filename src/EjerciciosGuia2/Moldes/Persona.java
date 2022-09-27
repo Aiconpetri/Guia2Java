@@ -1,30 +1,27 @@
 
 package EjerciciosGuia2.Moldes;
 
+
 public class Persona {
-    private String nombre;
-    private int edad;
-    private String sexo;
-    private double peso;
-    private double altura;
-    private int IMC;
-    private boolean Mayor;
+   private String Nombre;
+   private int edad;
+   private String sexo;
+   private double peso;
+   private double altura;
 
     public Persona() {
     }
 
-    public Persona(String nombre, int edad, String sexo, double peso, double altura, int IMC,boolean Mayor) {
-        this.nombre = nombre;
+    public Persona(String Nombre, int edad, String sexo, double peso, double altura) {
+        this.Nombre = Nombre;
         this.edad = edad;
         this.sexo = sexo;
         this.peso = peso;
         this.altura = altura;
-        this.IMC= IMC;
-        this.Mayor= Mayor;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
     public void setEdad(int edad) {
@@ -43,17 +40,8 @@ public class Persona {
         this.altura = altura;
     }
 
-    public void setIMC(int IMC) {
-        this.IMC = IMC;
-    }
-
-    public void setMayor(boolean Mayor) {
-        this.Mayor = Mayor;
-    }
-    
-
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public int getEdad() {
@@ -72,12 +60,10 @@ public class Persona {
         return altura;
     }
 
-    public int getIMC() {
-        return IMC;
+    @Override
+    public String toString() {
+        return "Persona{" + "Nombre=" + Nombre + ", edad=" + edad + ", sexo=" + sexo + ", peso=" + peso + ", altura=" + altura + '}';
     }
 
-    public boolean getMayor() {
-        return Mayor;
-    }
-    
+  
 }
